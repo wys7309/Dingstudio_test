@@ -1,0 +1,8 @@
+{
+  "name": "율컴퍼니 - 프리미엄 경영컨설팅",
+  "description": "정부지원사업 및 경영컨설팅 전문 기업 율컴퍼니의 공식 웹사이트입니다. 현대적이고 세련된 디자인과 관리자 시스템을 제공합니다.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
