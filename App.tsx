@@ -6,8 +6,8 @@ import {
   Instagram, Globe, Linkedin, Facebook, Edit3, Trash2, PlusCircle,
   Save, Layout as LayoutIcon, Image as ImageIcon, Sparkles, CheckCircle2, AlertCircle
 } from 'lucide-react';
-import { SiteConfig, Post, ViewType } from './types.ts';
-import { INITIAL_CONFIG, INITIAL_POSTS } from './constants.ts';
+import { SiteConfig, Post, ViewType } from './types';
+import { INITIAL_CONFIG, INITIAL_POSTS } from './constants';
 import { 
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, 
   AreaChart, Area 
@@ -269,18 +269,20 @@ const AdminDashboard = ({
               </div>
               <div className="bg-white/5 p-6 rounded-xl border border-white/5 h-80">
                 <h3 className="text-sm font-medium text-gray-400 mb-6">주간 방문자 트렌드</h3>
-                <ResponsiveContainer width="100%" height="100%">
-                  <AreaChart data={data}>
-                    <defs>
-                      <linearGradient id="colorCount" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="5%" stopColor="#7c3aed" stopOpacity={0.3}/>
-                        <stop offset="95%" stopColor="#7c3aed" stopOpacity={0}/>
-                      </linearGradient>
-                    </defs>
-                    <Tooltip contentStyle={{ background: '#171717', border: 'none', borderRadius: '8px' }} />
-                    <Area type="monotone" dataKey="count" stroke="#7c3aed" fillOpacity={1} fill="url(#colorCount)" />
-                  </AreaChart>
-                </ResponsiveContainer>
+                <div className="w-full h-full">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={data}>
+                      <defs>
+                        <linearGradient id="colorCount" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#7c3aed" stopOpacity={0.3}/>
+                          <stop offset="95%" stopColor="#7c3aed" stopOpacity={0}/>
+                        </linearGradient>
+                      </defs>
+                      <Tooltip contentStyle={{ background: '#171717', border: 'none', borderRadius: '8px' }} />
+                      <Area type="monotone" dataKey="count" stroke="#7c3aed" fillOpacity={1} fill="url(#colorCount)" />
+                    </AreaChart>
+                  </ResponsiveContainer>
+                </div>
               </div>
             </div>
           )}

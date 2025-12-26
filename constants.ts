@@ -1,5 +1,5 @@
 
-import { SiteConfig, Post } from './types.ts';
+import { SiteConfig, Post } from './types';
 
 export const INITIAL_CONFIG: SiteConfig = {
   name: "율컴퍼니",
