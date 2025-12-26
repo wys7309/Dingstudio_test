@@ -6,8 +6,8 @@ import {
   Instagram, Globe, Linkedin, Facebook, Edit3, Trash2, PlusCircle,
   Save, Layout as LayoutIcon, Image as ImageIcon, Sparkles, CheckCircle2, AlertCircle
 } from 'lucide-react';
-import { SiteConfig, Post, ViewType } from './types';
-import { INITIAL_CONFIG, INITIAL_POSTS } from './constants';
+import { SiteConfig, Post, ViewType } from './types.ts';
+import { INITIAL_CONFIG, INITIAL_POSTS } from './constants.ts';
 import { 
   LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, 
   AreaChart, Area 
